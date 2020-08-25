@@ -6,7 +6,7 @@ The mailing list is utilized for mass email applications (parent list, volunteer
 After [downloading](https://github.com/STEMninjas/mailing-list/archive/master.zip) the repository, make sure the file structure is intact.
 
 ```bash
-src
+stemninjas-mailing-list
 ├── data
 |   ├── client_data.json
 │   ├── email_data_loc.txt
