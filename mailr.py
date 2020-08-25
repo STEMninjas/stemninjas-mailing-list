@@ -40,9 +40,10 @@ while(master_check==False):
 fw=open("data/email_data_loc.txt","r+")
 creds = ServiceAccountCredentials.from_json_keyfile_name(fw.readline(), scope) # /Users/shivamsyal/Downloads/client_data.json
 client = gspread.authorize(creds)
-sheet_name="STEMninjas Registration (Responses)"
+sheet_name="SPREADSHEET_NAME_HERE"
 sheet = client.open(sheet_name).sheet1
-email_send = sheet.col_values(5)
+val=5 # CHANGE THIS VALUE TO THE COLUMN YOU WANT TO USE!!
+email_send = sheet.col_values(val)
 x=len(email_send)
 test=False
 while(test==False):
@@ -120,9 +121,9 @@ while(check==False):
         print("Please enter a valid answer (y/n)\n")
     elif(s_ans=="y"):
         check=True
-        email_user = 'contactstemninjas@gmail.com'
-        email_password = 'stemninjasmca1'
-        subject = 'IMPORTANT UPDATE: STEMninjas Donations and Class Continuation'
+        email_user = 'SENDER_EMAIL_HERE'
+        email_password = 'SENDER_PASSWORD_HERE'
+        subject = 'EMAIL_SUBJECT_HERE'
         msg = MIMEMultipart()
         msg['From'] = email_user
         msg['To'] = ", ".join(email_send)
