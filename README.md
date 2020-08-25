@@ -7,8 +7,9 @@ After [downloading](https://github.com/STEMninjas/mailing-list/archive/master.zi
 
 ```bash
 stemninjas-mailing-list
+├── README.md
 ├── data
-|   ├── client_data.json
+│   ├── client_data.json
 │   ├── email_data_loc.txt
 │   └── email_message_text.txt
 └── mailr.py
